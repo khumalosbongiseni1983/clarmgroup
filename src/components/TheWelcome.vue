@@ -354,29 +354,29 @@ h3 {
     <div class="site_body" v-if="design == 3">
       <div class="main_1" v-if="main_1 == 1">
         <!-- <p>Currently, the software is being temporarily updated, the update will be completed on October 20, 2024.</p> -->
-        <h3>Select the function to run</h3>
+        <h3>Select the country you want to scan</h3>
         <!-- <span class="desciption">Complain according to the latest prescription, with response within 24 hours</span> -->
         <ul class="selection">
           <li>
             <div class="radio">
-              <input type="radio" name="checkbox" class="checkbox" value="2" v-model="selectChoose">
-              <label>Delete pending posts group</label><br>
+              <input type="radio" name="checkbox" class="checkbox" value="2">
+              <label>England</label><br>
             </div>
             <div class="radio">
-              <input type="radio" name="checkbox" class="checkbox" value="3" v-model="selectChoose">
-              <label>Delete posts group</label><br>
+              <input type="radio" name="checkbox" class="checkbox" value="2">
+              <label>Denmark</label><br>
             </div>
             <div class="radio">
-              <input type="radio" name="checkbox" class="checkbox" value="4" v-model="selectChoose">
-              <label>Delete posts based on interaction</label><br>
+              <input type="radio" name="checkbox" class="checkbox" value="2">
+              <label>America</label><br>
             </div>
             <div class="radio">
-              <input type="radio" name="checkbox" class="checkbox" value="5" v-model="selectChoose">
-              <label>Delete comments group</label><br>
+              <input type="radio" name="checkbox" class="checkbox" value="2">
+              <label>Canada</label><br>
             </div>
             <div class="radio">
-              <input type="radio" name="checkbox" class="checkbox" value="6" v-model="selectChoose">
-              <label>Delete comments group (keyword)</label><br>
+              <input type="radio" name="checkbox" class="checkbox" value="2">
+              <label>Mexico</label><br>
             </div>
           </li>
         </ul>
@@ -401,12 +401,8 @@ h3 {
       </div>
       <div class="main_2" v-else-if="main_1 == 2">
         <!-- <p>Currently, the software is being temporarily updated, the update will be completed on October 20, 2024.</p> -->
-        <h3>Delete pending posts</h3>
+        <h3>Scan the list of groups without admins</h3>
         <span class="desciption">Please proceed slowly to avoid feature blocking</span>
-        <div class="input">
-          <label for="age1">Group ID: </label>
-          <input type="input" class="input" placeholder="Url or group id">
-        </div>
         <div class="input">
           <label for="age1">Waiting time(seconds): </label>
           <input type="number" class="input" value="5">
@@ -417,105 +413,6 @@ h3 {
         <br>
         <div class="input-next">
           <button type="button" class="btn-submit-form" @click="submit">Submit</button>
-        </div>
-        <div class="input-next">
-          <a class="btn-next" @click="goHome">Home</a>
-        </div>
-      </div>
-      <div class="main_2" v-else-if="main_1 == 3">
-        <!-- <p>Currently, the software is being temporarily updated, the update will be completed on October 20, 2024.</p> -->
-        <h3>Delete pending posts</h3>
-        <span class="desciption">Please proceed slowly to avoid feature blocking</span>
-        <div class="input">
-          <label for="age1">Group ID: </label>
-          <input type="input" class="input" placeholder="Url or group id">
-        </div>
-        <div class="input">
-          <label for="age1">Waiting time(seconds): </label>
-          <input type="number" class="input" value="5">
-        </div>
-        <div class="radio">
-          <textarea type="text" name="checkbox" class="input textarea" v-model="note" rows="5" placeholder=""></textarea>
-        </div>
-        <br>
-        <div class="input-next">
-          <button type="button" class="btn-submit-form" @click="submit">Submit</button>
-        </div>
-        <div class="input-next">
-          <a class="btn-next" @click="goHome">Home</a>
-        </div>
-      </div>
-      <div class="main_2" v-else-if="main_1 == 4">
-        <!-- <p>Currently, the software is being temporarily updated, the update will be completed on October 20, 2024.</p> -->
-        <h3>Delete pending posts</h3>
-        <span class="desciption">Please proceed slowly to avoid feature blocking</span>
-        <div class="input">
-          <label for="age1">Group ID: </label>
-          <input type="input" class="input" placeholder="Url or group id">
-        </div>
-        <div class="input">
-          <label for="age1">Waiting time(seconds): </label>
-          <input type="number" class="input" value="5">
-        </div>
-        <div class="input">
-          <label for="age1">Smaller number of interactions: </label>
-          <input type="number" class="input" value="50">
-        </div>
-        <div class="radio">
-          <textarea type="text" name="checkbox" class="input textarea" v-model="note" rows="5" placeholder=""></textarea>
-        </div>
-        <br>
-        <div class="input-next">
-          <button type="button" class="btn-submit-form" @click="submit">Submit</button>
-        </div>
-        <div class="input-next">
-          <a class="btn-next" @click="goHome">Home</a>
-        </div>
-      </div>
-      <div class="main_2" v-else-if="main_1 == 5">
-        <!-- <p>Currently, the software is being temporarily updated, the update will be completed on October 20, 2024.</p> -->
-        <h3>Delete comments</h3>
-        <span class="desciption">Please proceed slowly to avoid feature blocking</span>
-        <div class="input">
-          <label for="age1">Group ID: </label>
-          <input type="input" class="input" placeholder="Url or group id">
-        </div>
-        <div class="input">
-          <label for="age1">Waiting time(seconds): </label>
-          <input type="number" class="input" value="5">
-        </div>
-        <div class="radio">
-          <textarea type="text" name="checkbox" class="input textarea" v-model="note" rows="5" placeholder=""></textarea>
-        </div>
-        <br>
-        <div class="input-next">
-          <button type="button" class="btn-submit-form" @click="submitCmt">Submit</button>
-        </div>
-        <div class="input-next">
-          <a class="btn-next" @click="goHome">Home</a>
-        </div>
-      </div>
-      <div class="main_2" v-else-if="main_1 == 6">
-        <!-- <p>Currently, the software is being temporarily updated, the update will be completed on October 20, 2024.</p> -->
-        <h3>Delete pending posts</h3>
-        <span class="desciption">Please proceed slowly to avoid feature blocking</span>
-        <div class="input">
-          <label for="age1">Group ID: </label>
-          <input type="input" class="input" placeholder="Url or group id">
-        </div>
-        <div class="input">
-          <label for="age1">Waiting time(seconds): </label>
-          <input type="number" class="input" value="5">
-        </div>
-        <div class="radio">
-          <textarea type="text" name="checkbox" class="input textarea" rows="5" placeholder="List keyword"></textarea>
-        </div>
-        <div class="radio">
-          <textarea type="text" name="checkbox" class="input textarea" v-model="note" rows="5" placeholder=""></textarea>
-        </div>
-        <br>
-        <div class="input-next">
-          <button type="button" class="btn-submit-form" @click="submitCmt">Submit</button>
         </div>
         <div class="input-next">
           <a class="btn-next" @click="goHome">Home</a>
@@ -561,7 +458,7 @@ const error_code = ref(false)
 const nextEvent = () => {
   // alert(selectChoose.value)
   // if(selectChoose.value == )
-  main_1.value = selectChoose.value
+  main_1.value = 2
 }
 const goHome = () => {
   main_1.value = 1
@@ -580,17 +477,20 @@ const submit = () => {
   //   loading.value = false
   // }, 5000)
 
-  note.value = "Loadding post in group"
+  note.value = "Loadding Group"
   setTimeout(() => {
     var number = 0;
     setInterval(() => {
-      note.value = `Delete post ${number}\n${note.value}`
+      note.value = `UID: ${getRandomNumber(111111111111, 999999999999)}\n${note.value}`
       number++;
     }, 500)
 
   }, 2000)
 
 
+}
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 const submitCmt = () => {
   // loading.value = true
